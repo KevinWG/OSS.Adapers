@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>OSSCore</Authors>
+    <Company>OSSCore</Company>
+    <Product>OSSCore</Product>
+    <Description>OSS.Clients.Oauth.WX的适配接口实现</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\OSS.Adapter.Oauth.WX.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OSS.Clients.Oauth.WX" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OSS.Adapter.Oauth.Interface\OSS.Adapter.Oauth.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

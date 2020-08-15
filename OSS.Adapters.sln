@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OSS.Adapter.Oauth.Interface", "Oauth\OSS.Adapter.Oauth.Interface\OSS.Adapter.Oauth.Interface.csproj", "{08575C9C-5117-41A9-9A9D-9799FA135CC2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Oauth", "Oauth", "{2B4E95A6-4438-45F7-B0FF-A05028A4A5CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OSS.Adapter.Oauth.WX", "Oauth\OSS.Adapter.Oauth.WX\OSS.Adapter.Oauth.WX.csproj", "{7461F353-0633-4869-AA43-A619257688FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SMS", "SMS", "{9A81D8B2-5EAB-4859-BD99-B944AA68B1FD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OSS.Adapter.SMS.Interface", "SMS\OSS.Adapter.SMS.Interface\OSS.Adapter.SMS.Interface.csproj", "{73239561-0E7A-4B99-A1A4-FDAF423E9151}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OSS.Adapter.SMS.Ali", "SMS\OSS.Adapter.SMS.Ali\OSS.Adapter.SMS.Ali.csproj", "{ECFFB909-1A17-44FD-BD05-2C908B80EDB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08575C9C-5117-41A9-9A9D-9799FA135CC2}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{08575C9C-5117-41A9-9A9D-9799FA135CC2}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{08575C9C-5117-41A9-9A9D-9799FA135CC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08575C9C-5117-41A9-9A9D-9799FA135CC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7461F353-0633-4869-AA43-A619257688FF}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{7461F353-0633-4869-AA43-A619257688FF}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{7461F353-0633-4869-AA43-A619257688FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7461F353-0633-4869-AA43-A619257688FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73239561-0E7A-4B99-A1A4-FDAF423E9151}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{73239561-0E7A-4B99-A1A4-FDAF423E9151}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{73239561-0E7A-4B99-A1A4-FDAF423E9151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73239561-0E7A-4B99-A1A4-FDAF423E9151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECFFB909-1A17-44FD-BD05-2C908B80EDB9}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{ECFFB909-1A17-44FD-BD05-2C908B80EDB9}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{ECFFB909-1A17-44FD-BD05-2C908B80EDB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECFFB909-1A17-44FD-BD05-2C908B80EDB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{08575C9C-5117-41A9-9A9D-9799FA135CC2} = {2B4E95A6-4438-45F7-B0FF-A05028A4A5CA}
+		{7461F353-0633-4869-AA43-A619257688FF} = {2B4E95A6-4438-45F7-B0FF-A05028A4A5CA}
+		{73239561-0E7A-4B99-A1A4-FDAF423E9151} = {9A81D8B2-5EAB-4859-BD99-B944AA68B1FD}
+		{ECFFB909-1A17-44FD-BD05-2C908B80EDB9} = {9A81D8B2-5EAB-4859-BD99-B944AA68B1FD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24F494F3-ACA2-4691-9672-941CC5440B36}
+	EndGlobalSection
+EndGlobal

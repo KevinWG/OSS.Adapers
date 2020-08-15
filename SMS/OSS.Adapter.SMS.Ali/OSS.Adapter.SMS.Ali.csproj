@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>OSS.Core</Authors>
+    <Product>OSS.Core</Product>
+    <Description>短信适配接口</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\OSS.Adapter.SMS.Ali.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OSS.Clients.SMS.Ali" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OSS.Adapter.SMS.Interface\OSS.Adapter.SMS.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

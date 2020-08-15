@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>OSSCore</Authors>
+    <Product>OSSCore</Product>
+    <RepositoryUrl>https://github.com/KevinWG/OSS.Adapers</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/KevinWG/OSS.Adapers</PackageProjectUrl>
+    <PackageReleaseNotes>Oauth统一抽象适配接口</PackageReleaseNotes>
+    <Description>Oauth统一抽象适配接口</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\OSS.Adapter.Oauth.Interface.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OSS.Common" Version="2.3.1.7" />
+  </ItemGroup>
+
+</Project>
