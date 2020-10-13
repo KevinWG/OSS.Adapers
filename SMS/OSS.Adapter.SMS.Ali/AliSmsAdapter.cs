@@ -16,16 +16,35 @@ using OSS.Adapter.SMS.Interface;
 using OSS.Adapter.SMS.Interface.Mos;
 using OSS.Clients.SMS.Ali;
 using OSS.Clients.SMS.Ali.Reqs;
+using OSS.Common.BasicImpls;
 using OSS.Common.BasicMos.Resp;
 
 namespace OSS.Adapter.SMS.Ali
 {
-    public class AliSmsAdapter :AliSmsClient, ISmsAdapter
+    /// <summary>
+    /// 阿里短信发送适配
+    /// </summary>
+    public class AliSmsAdapter : AliSmsClient, ISmsAdapter
     {
-        public AliSmsAdapter(AliSmsConfig config)//:base(config)
+      
+        /// <inheritdoc />
+        public AliSmsAdapter() : base(null)
         {
+
         }
 
+        /// <inheritdoc />
+        public AliSmsAdapter(IMetaProvider<AliSmsConfig> configProvider)
+            : base(configProvider)
+        {
+
+        }
+
+        /// <summary>
+        /// 发送方法
+        /// </summary>
+        /// <param name="sendMsg"></param>
+        /// <returns></returns>
         public async Task<SendSmsResp> Send(SendSmsReq sendMsg)
         {
             return (await base.Send(sendMsg.ToAliSmsReq())).ToSmsResp();
