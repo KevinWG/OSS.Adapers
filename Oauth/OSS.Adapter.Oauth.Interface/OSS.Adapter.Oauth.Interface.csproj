@@ -6,16 +6,26 @@
     <Product>OSSCore</Product>
     <RepositoryUrl>https://github.com/KevinWG/OSS.Adapers</RepositoryUrl>
     <PackageProjectUrl>https://github.com/KevinWG/OSS.Adapers</PackageProjectUrl>
-    <PackageReleaseNotes>Oauth统一抽象适配接口</PackageReleaseNotes>
+    <PackageReleaseNotes>更新底层SDK</PackageReleaseNotes>
     <Description>Oauth统一抽象适配接口</Description>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <Version>1.0.1</Version>
+    <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\OSS.Adapter.Oauth.Interface.xml</DocumentationFile>
+    <DocumentationFile>\OSS.Adapter.Oauth.Interface.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OSS.Common" Version="2.3.1.7" />
+    <PackageReference Include="OSS.Common" Version="2.3.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

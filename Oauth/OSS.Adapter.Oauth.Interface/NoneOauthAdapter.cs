@@ -24,6 +24,7 @@ namespace OSS.Adapter.Oauth.Interface
     public class NoneOauthAdapter : IOauthAdapter
     {
         private readonly Resp _errResp;
+
         public NoneOauthAdapter()
         {
             _errResp=new Resp().WithResp(RespTypes.UnKnowOperate, "未知Oauth应用平台！");
@@ -40,10 +41,10 @@ namespace OSS.Adapter.Oauth.Interface
         /// <param name="state"></param>
         /// <param name="type"></param>
         /// <returns></returns>
-        public virtual Resp<string> GetOauthUrl(string redirectUrl, string state,
+        public virtual Task<StrResp> GetOauthUrl(string redirectUrl, string state,
             OauthClientType type)
         {
-            return new Resp<string>().WithResp(_errResp);
+            return Task.FromResult(new StrResp().WithResp(_errResp));
         }
 
 

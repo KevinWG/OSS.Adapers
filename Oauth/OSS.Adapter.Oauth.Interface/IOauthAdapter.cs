@@ -28,7 +28,7 @@ namespace OSS.Adapter.Oauth.Interface
         /// <param name="state"></param>
         /// <param name="clientType"></param>
         /// <returns></returns>
-        Resp<string> GetOauthUrl(string redirectUrl, string state, OauthClientType clientType);
+        Task<StrResp> GetOauthUrl(string redirectUrl, string state, OauthClientType clientType);
 
         /// <summary>
         ///     通过授权回调code 获取授权用户信息

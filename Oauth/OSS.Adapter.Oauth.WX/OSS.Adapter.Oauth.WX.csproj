@@ -6,18 +6,29 @@
     <Company>OSSCore</Company>
     <Product>OSSCore</Product>
     <Description>OSS.Clients.Oauth.WX的适配接口实现</Description>
+    <Version>1.0.1</Version>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/KevinWG/OSS.Adapers</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/KevinWG/OSS.Adapers</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\OSS.Adapter.Oauth.WX.xml</DocumentationFile>
+    <DocumentationFile>\OSS.Adapter.Oauth.WX.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OSS.Clients.Oauth.WX" Version="1.1.1" />
+    <PackageReference Include="OSS.Clients.Oauth.WX" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\OSS.Adapter.Oauth.Interface\OSS.Adapter.Oauth.Interface.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

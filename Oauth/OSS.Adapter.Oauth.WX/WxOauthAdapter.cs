@@ -18,6 +18,7 @@ using OSS.Adapter.Oauth.Interface.Mos.Enums;
 using OSS.Adapter.Oauth.WX.Extention;
 using OSS.Clients.Oauth.WX;
 using OSS.Clients.Oauth.WX.Mos;
+using OSS.Common.BasicImpls;
 using OSS.Common.BasicMos;
 using OSS.Common.BasicMos.Resp;
 
@@ -28,15 +29,24 @@ namespace OSS.Adapter.Oauth.WX
     /// </summary>
     public class WXOauthAdapter : WXOauthApi, IOauthAdapter
     {
-        public WXOauthAdapter(): base(null) { }
-        public WXOauthAdapter(AppConfig config ):base(config) {}
+        /// <inheritdoc />
+        public WXOauthAdapter() : base(null)
+        {
+
+        }
 
         /// <inheritdoc />
-        public Resp<string> GetOauthUrl(string redirectUrl, string state,
+        public WXOauthAdapter(IMetaProvider<AppConfig> configProvider )
+            : base(configProvider)
+        {
+
+        }
+
+        /// <inheritdoc />
+        public Task<StrResp> GetOauthUrl(string redirectUrl, string state,
             OauthClientType type)
         {
-            var url = GetAuthorizeUrl(redirectUrl, state,(AuthClientType)type);
-            return new Resp<string>(url);
+            return GetAuthorizeUrl(redirectUrl, state,(AuthClientType)type);
         }
 
       
