@@ -6,7 +6,7 @@
     <Company>OSSCore</Company>
     <Product>OSSCore</Product>
     <Description>OSS.Clients.Oauth.WX的适配接口实现</Description>
-    <Version>1.0.1</Version>
+    <Version>1.2</Version>
     <PackageIcon>logo.png</PackageIcon>
     <PackageProjectUrl>https://github.com/KevinWG/OSS.Adapers</PackageProjectUrl>
     <RepositoryUrl>https://github.com/KevinWG/OSS.Adapers</RepositoryUrl>

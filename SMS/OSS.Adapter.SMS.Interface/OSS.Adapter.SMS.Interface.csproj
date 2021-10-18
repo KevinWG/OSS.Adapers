@@ -5,7 +5,7 @@
     <Authors>OSSCore</Authors>
     <Product>OSSCore</Product>
     <Description>短信适配的统一接口</Description>
-    <Version>1.0.1</Version>
+    <Version>1.2</Version>
     <PackageIcon>logo.png</PackageIcon>
     <RepositoryUrl>https://github.com/KevinWG/OSS.Adapers</RepositoryUrl>
     <PackageProjectUrl>https://github.com/KevinWG/OSS.Adapers</PackageProjectUrl>
@@ -20,7 +20,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OSS.Common" Version="2.3.2.2" />
+    <PackageReference Include="OSS.Common" Version="2.6.2" />
   </ItemGroup>
 
   <ItemGroup>
