@@ -9,7 +9,7 @@
     <PackageReleaseNotes>更新底层SDK</PackageReleaseNotes>
     <Description>Oauth统一抽象适配接口</Description>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <Version>1.2</Version>
+    <Version>1.2.1</Version>
     <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
 
