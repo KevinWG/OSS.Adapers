@@ -17,7 +17,7 @@ using OSS.Adapter.SMS.Interface.Mos;
 using OSS.Clients.SMS.Ali;
 using OSS.Clients.SMS.Ali.Reqs;
 using OSS.Common.BasicImpls;
-using OSS.Common.BasicMos.Resp;
+using OSS.Common.Resp;
 
 namespace OSS.Adapter.SMS.Ali
 {

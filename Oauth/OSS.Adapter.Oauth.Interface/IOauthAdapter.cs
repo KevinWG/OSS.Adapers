@@ -15,7 +15,7 @@
 using System.Threading.Tasks;
 using OSS.Adapter.Oauth.Interface.Mos;
 using OSS.Adapter.Oauth.Interface.Mos.Enums;
-using OSS.Common.BasicMos.Resp;
+using OSS.Common.Resp;
 
 namespace OSS.Adapter.Oauth.Interface
 {

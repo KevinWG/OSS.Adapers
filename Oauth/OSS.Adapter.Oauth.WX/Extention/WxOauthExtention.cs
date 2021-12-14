@@ -16,8 +16,8 @@ using System;
 using OSS.Adapter.Oauth.Interface.Mos;
 using OSS.Adapter.Oauth.Interface.Mos.Enums;
 using OSS.Clients.Oauth.WX.Mos;
-using OSS.Common.BasicMos.Resp;
-using OSS.Common.Extention;
+using OSS.Common.Extension;
+using OSS.Common.Resp;
 
 namespace OSS.Adapter.Oauth.WX.Extention
 {

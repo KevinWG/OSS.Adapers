@@ -20,7 +20,7 @@ using OSS.Clients.Oauth.WX;
 using OSS.Clients.Oauth.WX.Mos;
 using OSS.Common.BasicImpls;
 using OSS.Common.BasicMos;
-using OSS.Common.BasicMos.Resp;
+using OSS.Common.Resp;
 
 namespace OSS.Adapter.Oauth.WX
 {

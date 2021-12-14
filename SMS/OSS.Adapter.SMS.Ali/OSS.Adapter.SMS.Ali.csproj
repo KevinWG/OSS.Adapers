@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Authors>OSS.Core</Authors>
-    <Product>OSS.Core</Product>
+    <Authors>OSSCore</Authors>
+    <Product>OSS.Adapter.SMS.Ali</Product>
     <Description>短信适配接口</Description>
     <PackageProjectUrl>https://github.com/KevinWG/OSS.Adapers</PackageProjectUrl>
     <RepositoryUrl>https://github.com/KevinWG/OSS.Adapers</RepositoryUrl>
     <PackageIcon>logo.png</PackageIcon>
-    <Version>1.2</Version>
+    <Version>1.3</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OSS.Clients.SMS.Ali" Version="1.0.2.2" />
+    <PackageReference Include="OSS.Clients.SMS.Ali" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
