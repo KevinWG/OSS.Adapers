@@ -11,13 +11,9 @@
 
 #endregion
 
-using System.Threading.Tasks;
-using OSS.Adapter.SMS.Interface;
-using OSS.Adapter.SMS.Interface.Mos;
 using OSS.Clients.SMS.Ali;
-using OSS.Clients.SMS.Ali.Reqs;
-using OSS.Common.BasicImpls;
 using OSS.Common.Resp;
+using System.Threading.Tasks;
 
 namespace OSS.Adapter.SMS.Ali
 {
@@ -26,52 +22,53 @@ namespace OSS.Adapter.SMS.Ali
     /// </summary>
     public class AliSmsAdapter : AliSmsClient, ISmsAdapter
     {
-      
-        /// <inheritdoc />
-        public AliSmsAdapter() : base(null)
-        {
-
-        }
-
-        /// <inheritdoc />
-        public AliSmsAdapter(IMetaProvider<AliSmsConfig> configProvider)
-            : base(configProvider)
-        {
-
-        }
-
         /// <summary>
         /// 发送方法
         /// </summary>
         /// <param name="sendMsg"></param>
         /// <returns></returns>
-        public async Task<SendSmsResp> Send(SendSmsReq sendMsg)
+        public async Task<SendSmsResp> SendAsync(SendSmsReq sendMsg)
         {
-            return (await base.Send(sendMsg.ToAliSmsReq())).ToSmsResp();
+            return (await base.SendAsync(sendMsg.ToAliSmsReq())).ToSmsResp();
         }
     }
-
+    
+    /// <summary>
+    ///   请求数据映射
+    /// </summary>
     public static class SendSmsReqMaps
     {
-        public static SendAliSmsReq ToAliSmsReq(this SendSmsReq req)
+        /// <summary>
+        ///  转化成阿里云端发送请求
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
+        public static AliSendSmsReq ToAliSmsReq(this SendSmsReq req)
         {
-            var aliReq = new SendAliSmsReq
+            var aliReq = new AliSendSmsReq
             {
-                PhoneNums     = req.PhoneNums,
+                phone_nums    = req.PhoneNums,
                 body_paras    = req.body_paras,
                 sign_name     = req.sign_name,
                 template_code = req.template_code
             };
-
             return aliReq;
         }
 
-
-        public static SendSmsResp ToSmsResp(this  SendAliSmsResp aResp)
+        /// <summary>
+        ///  转化成通用统一响应
+        /// </summary>
+        /// <param name="aResp"></param>
+        /// <returns></returns>
+        public static SendSmsResp ToSmsResp(this  AliSendSmsResp aResp)
         {
             var resp=new SendSmsResp();
 
-            resp.WithResp(aResp);
+            if (aResp.Code.ToUpper()!= "OK")
+            {
+                resp.WithResp(RespCodes.OperateFailed, aResp.Message);
+            }
+
             resp.plat_msg_id = aResp.BizId;
             return resp;
         }

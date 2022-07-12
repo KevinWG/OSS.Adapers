@@ -8,7 +8,7 @@
     <PackageProjectUrl>https://github.com/KevinWG/OSS.Adapers</PackageProjectUrl>
     <RepositoryUrl>https://github.com/KevinWG/OSS.Adapers</RepositoryUrl>
     <PackageIcon>logo.png</PackageIcon>
-    <Version>1.3</Version>
+    <Version>1.5</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OSS.Clients.SMS.Ali" Version="1.1.0" />
+    <PackageReference Include="OSS.Clients.SMS.Ali" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>

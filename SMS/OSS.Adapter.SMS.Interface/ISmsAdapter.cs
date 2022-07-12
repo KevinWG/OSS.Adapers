@@ -12,9 +12,8 @@
 #endregion
 
 using System.Threading.Tasks;
-using OSS.Adapter.SMS.Interface.Mos;
 
-namespace OSS.Adapter.SMS.Interface
+namespace OSS.Adapter.SMS
 {
     /// <summary>
     ///     短信插件接口
@@ -26,6 +25,6 @@ namespace OSS.Adapter.SMS.Interface
         /// </summary>
         /// <param name="sendMsg">消息实体</param>
         /// <returns></returns>
-        Task<SendSmsResp> Send(SendSmsReq sendMsg);
+        Task<SendSmsResp> SendAsync(SendSmsReq sendMsg);
     }
 }

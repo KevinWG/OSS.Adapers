@@ -27,7 +27,7 @@ namespace OSS.Adapter.Oauth.Interface
 
         public NoneOauthAdapter()
         {
-            _errResp=new Resp().WithResp(SysRespTypes.NotImplement, "未知Oauth应用平台！");
+            _errResp=new Resp().WithResp(SysRespCodes.NotImplement, "未知Oauth应用平台！");
         }
         public NoneOauthAdapter(Resp errResp)
         {

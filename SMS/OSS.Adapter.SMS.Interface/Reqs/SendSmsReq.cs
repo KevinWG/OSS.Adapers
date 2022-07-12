@@ -14,7 +14,7 @@
 using System.Collections.Generic;
 using OSS.Common.Resp;
 
-namespace OSS.Adapter.SMS.Interface.Mos
+namespace OSS.Adapter.SMS
 {
     public class SendSmsReq
     {

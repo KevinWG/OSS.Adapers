@@ -11,16 +11,14 @@
 
 #endregion
 
-using System.Threading.Tasks;
 using OSS.Adapter.Oauth.Interface;
 using OSS.Adapter.Oauth.Interface.Mos;
 using OSS.Adapter.Oauth.Interface.Mos.Enums;
 using OSS.Adapter.Oauth.WX.Extention;
 using OSS.Clients.Oauth.WX;
 using OSS.Clients.Oauth.WX.Mos;
-using OSS.Common.BasicImpls;
-using OSS.Common.BasicMos;
 using OSS.Common.Resp;
+using System.Threading.Tasks;
 
 namespace OSS.Adapter.Oauth.WX
 {
@@ -30,26 +28,12 @@ namespace OSS.Adapter.Oauth.WX
     public class WXOauthAdapter : WXOauthApi, IOauthAdapter
     {
         /// <inheritdoc />
-        public WXOauthAdapter() : base(null)
-        {
-
-        }
-
-        /// <inheritdoc />
-        public WXOauthAdapter(IMetaProvider<AppConfig> configProvider )
-            : base(configProvider)
-        {
-
-        }
-
-        /// <inheritdoc />
         public Task<StrResp> GetOauthUrl(string redirectUrl, string state,
             OauthClientType type)
         {
             return GetAuthorizeUrl(redirectUrl, state,(AuthClientType)type);
         }
-
-      
+        
         /// <inheritdoc />
         public async Task<Resp<OauthAccessTokenMo>> GetOauthTokenAsync(string code, string state)
         {
