@@ -25,7 +25,7 @@ namespace OSS.Adapter.Oauth.WX
     /// <summary>
     ///     微信授权处理类
     /// </summary>
-    public class WXOauthAdapter : WXOauthApi, IOauthAdapter
+    public class WxAdaptedOauthHandler : WXOauthApi, IAdaptedOauthHandler
     {
         /// <inheritdoc />
         public Task<StrResp> GetOauthUrl(string redirectUrl, string state,

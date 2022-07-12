@@ -5,7 +5,7 @@
     <Authors>OSSCore</Authors>
     <Product>OSS.Adapter.SMS.Interface</Product>
     <Description>短信适配的统一接口</Description>
-    <Version>1.5</Version>
+    <Version>2.0</Version>
     <PackageIcon>logo.png</PackageIcon>
     <RepositoryUrl>https://github.com/KevinWG/OSS.Adapers</RepositoryUrl>
     <PackageProjectUrl>https://github.com/KevinWG/OSS.Adapers</PackageProjectUrl>

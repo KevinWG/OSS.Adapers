@@ -18,7 +18,7 @@ namespace OSS.Adapter.SMS
     /// <summary>
     ///     短信插件接口
     /// </summary>
-    public interface ISmsAdapter
+    public interface IAdaptedSmsHandler
     {
         /// <summary>
         ///  发送短信消息

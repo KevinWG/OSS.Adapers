@@ -11,6 +11,7 @@
 
 #endregion
 
+
 using System.Threading.Tasks;
 using OSS.Adapter.Oauth.Interface.Mos;
 using OSS.Adapter.Oauth.Interface.Mos.Enums;
@@ -18,35 +19,16 @@ using OSS.Common.Resp;
 
 namespace OSS.Adapter.Oauth.Interface
 {
-    /// <summary>
-    ///     授权处理接口
-    /// </summary>
-    public class NoneOauthAdapter : IOauthAdapter
+    public interface IAdaptedOauthHandler
     {
-        private readonly Resp _errResp;
-
-        public NoneOauthAdapter()
-        {
-            _errResp=new Resp().WithResp(SysRespCodes.NotImplement, "未知Oauth应用平台！");
-        }
-        public NoneOauthAdapter(Resp errResp)
-        {
-            _errResp = errResp;
-        }
-
         /// <summary>
         ///     获取授权地址
         /// </summary>
         /// <param name="redirectUrl"></param>
         /// <param name="state"></param>
-        /// <param name="type"></param>
+        /// <param name="clientType"></param>
         /// <returns></returns>
-        public virtual Task<StrResp> GetOauthUrl(string redirectUrl, string state,
-            OauthClientType type)
-        {
-            return Task.FromResult(new StrResp().WithResp(_errResp));
-        }
-
+        Task<StrResp> GetOauthUrl(string redirectUrl, string state, OauthClientType clientType);
 
         /// <summary>
         ///     通过授权回调code 获取授权用户信息
@@ -54,11 +36,7 @@ namespace OSS.Adapter.Oauth.Interface
         /// <param name="code"></param>
         /// <param name="state"></param>
         /// <returns></returns>
-        public virtual  Task<Resp<OauthAccessTokenMo>> GetOauthTokenAsync(string code, string state)
-        {
-            return Task.FromResult(new Resp<OauthAccessTokenMo>().WithResp(_errResp));
-        }
-
+        Task<Resp<OauthAccessTokenMo>> GetOauthTokenAsync(string code, string state);
 
         /// <summary>
         ///     通过授权Token 获取授权用户信息
@@ -66,9 +44,6 @@ namespace OSS.Adapter.Oauth.Interface
         /// <param name="accessToken"></param>
         /// <param name="appUserId"></param>
         /// <returns></returns>
-        public virtual Task<Resp<OauthUser>> GetOauthUserAsync(string accessToken, string appUserId)
-        {
-            return Task.FromResult( new Resp<OauthUser>().WithResp(_errResp));
-        }
+        Task<Resp<OauthUser>> GetOauthUserAsync(string accessToken, string appUserId);
     }
 }

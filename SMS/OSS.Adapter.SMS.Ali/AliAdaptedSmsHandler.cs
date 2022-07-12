@@ -20,7 +20,7 @@ namespace OSS.Adapter.SMS.Ali
     /// <summary>
     /// 阿里短信发送适配
     /// </summary>
-    public class AliSmsAdapter : AliSmsClient, ISmsAdapter
+    public class AliAdaptedSmsHandler : AliSmsClient, IAdaptedSmsHandler
     {
         /// <summary>
         /// 发送方法
